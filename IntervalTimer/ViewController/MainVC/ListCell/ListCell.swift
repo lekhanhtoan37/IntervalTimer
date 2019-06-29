@@ -14,20 +14,17 @@ class ListCell: UITableViewCell {
   
   // Outlets
   //  @IBOutlet var contenttView: UIView!
-  @IBOutlet weak var titleLabel: UILabel! 
+  @IBOutlet weak var titleLabel: UILabel!
   
   @IBOutlet weak var timeLabel: UILabel!
   @IBOutlet weak var startButton: UIButton!
   
-  private var viewModel: AddEditViewModel!
-  
-  func configure() {
-    viewModel.name.asObservable()
-      .subscribe(onNext: {
-        self.titleLabel.text = $0
-      })
-    
+  func bindData(_ viewModel: RoutineModel) {
+    titleLabel.text = viewModel.title
+    timeLabel.text = viewModel.time
   }
+  
+  static let cellId = "Cell"
   
   
   override func awakeFromNib() {
@@ -41,13 +38,4 @@ class ListCell: UITableViewCell {
     
     
   }
-//  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//    super.init(style: .default, reuseIdentifier: reuseIdentifier)
-//
-//
-//  }
-//  required init?(coder aDecoder: NSCoder) {
-//    fatalError("init(coder:) has not been implemented")
-//  }
-  
 }

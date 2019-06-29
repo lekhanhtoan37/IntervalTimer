@@ -51,48 +51,71 @@ class MainViewController: UIViewController {
     return view
   }()
   
+  // RxSwift
   let bag = DisposeBag()
-  let listRoutine = BehaviorRelay<[AddEditViewModel]>(value: [])
+  var viewModel: MainViewModel!
+//  var routineViewModel = RoutineViewModel(model: RoutineModel(title: <#T##String#>, timeModel: <#T##TimeModel#>), timeModel: <#T##TimeModel#>)
   
   
+  init() {
+//    self.viewModel = MainViewModel(navigator: self.navigationController)
+    super.init(nibName: "MainViewController", bundle: nil)
+    
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
   
   // MARK: - Outlets
   @IBOutlet weak var scrollView: UIScrollView!
-  @IBOutlet var tableView: UITableView!
-  
-  //  var headerView: HeaderRoutineTableView!
-  
-  
+  @IBOutlet weak var tableView: UITableView!
+
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.scrollView.delegate = self
     setUpTableView()
     
+    self.viewModel = MainViewModel(navigator: self.navigationController!)
     let threeDaysLater = TimeInterval(3.days)
-    //    date.addingTimeInterval(threeDaysLater)
     print(3.minutes)
     
+    tableView.rx.setDelegate(self)
+
     // Binding data
-    tableView.rx.setDelegate(self).disposed(by: bag)
+    bindData()
+  }
+  
+  func bindData() {
+    let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
+      .mapToVoid()
     
-    listRoutine.asObservable()
-      .bind(to: self.tableView.rx.items(cellIdentifier: cellID, cellType: ListCell.self)) {
-        [weak self] (row, element, cell) in
-        element.name.asObservable().subscribe(onNext: {
-          title in
-          cell.titleLabel.text = title
-          
-        })
-      }.disposed(by: bag)
+    let input = MainViewModel.Input(trigger: viewWillAppear.asDriverOnErrorJustComplete(), editTrigger: editButton.rx.tap.asDriver(), createTrigger: addButton.rx.tap.asDriver(), routineViewModel: routineViewModel)
     
+    let output = viewModel.transform(input: input)
+    
+
+//    output.routineViewModel.items.bind(to: tableView.rx.items(cellIdentifier: cellID, cellType: ListCell.self)) {
+//      tableview, viewmodel, cell in
+//      cell.bindData(viewmodel)
+//    }
+    output.routineViewModel.asObservable().bind(to: tableView.rx.items(cellIdentifier: cellID, cellType: ListCell.self)) {
+      tableview, viewmodel, cell in
+      cell.bindData(viewmodel)
+    }
+    
+    output.startRoutine
+      .drive()
+      .disposed(by: bag)
+//    output
+    output.createRoutine
+      .drive()
+      .disposed(by: bag)
     
   }
   
-  
 }
-
-
 
 extension MainViewController: UIScrollViewDelegate {
   func setupSlideScrollView() {
@@ -106,28 +129,15 @@ extension MainViewController: UITableViewDelegate {
   
   func setUpTableView() {
     
-    
     let bundle = Bundle(for: type(of: self))
     let nib = UINib(nibName: "ListCell", bundle: bundle)
-    tableView.register(nib, forCellReuseIdentifier: cellID)
-    
-    
+    tableView.register(nib, forCellReuseIdentifier: ListCell.cellId)
     
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 1
   }
-  
-  //  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-  //    let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! ListCell
-  //
-  ////    cell.titleLabel.text = "Untitled"
-  ////
-  ////    cell.timeLabel.text = "23:10"
-  //
-  //    return cell
-  //  }
   
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     setUpHeaderView()
@@ -164,18 +174,32 @@ extension MainViewController {
     editButton.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -15).isActive = true
     
     // init Tapping
-    handleTapButton()
-    
   }
   
-  func handleTapButton() {
-    addButton.rx.tap.asDriver().throttle(0.5)
-      .drive(onNext: { [weak self] _ in
-        guard let self = self else {return}
-        //        self.present(AddEditViewController(), animated: true, completion: nil)
-        //        self.navigationController?.pushViewController(AddEditViewController(), animated: true)
-        let navAddEditViewController: UINavigationController = UINavigationController(rootViewController: AddEditViewController())
-        self.present(navAddEditViewController, animated: true, completion: nil)
-      })
+  
+}
+
+
+
+extension ObservableType {
+  
+  func catchErrorJustComplete() -> Observable<Element> {
+    return catchError { _ in
+      return Observable.empty()
+    }
   }
+  
+  func asDriverOnErrorJustComplete() -> Driver<Element> {
+    return asDriver { error in
+      return Driver.empty()
+    }
+  }
+  
+  func mapToVoid() -> Observable<Void> {
+    return map { _ in }
+  }
+  
+//  func mapToBool() -> Observable<Bool> {
+//    return map {_ in}
+//  }
 }

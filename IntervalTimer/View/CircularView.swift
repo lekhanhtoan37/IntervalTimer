@@ -34,3 +34,27 @@ class CircularView: UIView {
   }
 }
 
+@IBDesignable
+class CircularButton: UIButton {
+  private var _cornerRadius: CGFloat = 0.0
+  
+  @IBInspectable
+  var cornerRadius: CGFloat {
+    set (newValue) {
+      _cornerRadius = newValue
+      setCornerRadius()
+    }
+    get {
+      return _cornerRadius
+    }
+  }
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    setCornerRadius()
+  }
+  func setCornerRadius() {
+    
+    layer.cornerRadius = min(frame.width, frame.height) * 0.5
+    
+  }
+}

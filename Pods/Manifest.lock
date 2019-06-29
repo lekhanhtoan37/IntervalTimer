@@ -1,26 +1,40 @@
 PODS:
+  - Differentiator (4.0.1)
+  - MBCircularProgressBar (0.3.5)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
 
 DEPENDENCIES:
+  - MBCircularProgressBar
   - RxCocoa (~> 5)
+  - RxDataSources (~> 4.0.1)
   - RxSwift (~> 5)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Differentiator
+    - MBCircularProgressBar
     - RxCocoa
+    - RxDataSources
     - RxRelay
     - RxSwift
 
 SPEC CHECKSUMS:
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
 
-PODFILE CHECKSUM: e094f1ac01cbf080bbf3bcfef95a6d4c3da439ec
+PODFILE CHECKSUM: 8de64b42ded66be1d83538d9e58803ff55f18b41
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.7.2

@@ -8,8 +8,18 @@
 
 import Foundation
 
-struct Time {
-  let hours: Int
-  let minutes: Int
-  let seconds: Int
+struct TimeModel {
+  let warmUp: Int
+  let lowInterval: Int
+  let highInterval: Int
+  let coolDown: Int
+  let set: Int
+  
+  init(warmUp: Int, lowInterval: Int, highInterval: Int, coolDown: Int, set: Int) {
+    self.warmUp = warmUp
+    self.lowInterval = lowInterval
+    self.highInterval = highInterval
+    self.coolDown = coolDown
+    self.set = set
+  }
 }

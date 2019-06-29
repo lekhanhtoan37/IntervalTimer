@@ -10,6 +10,11 @@ import UIKit
 
 struct RoutineModel {
   let title: String
-  let time: DateInterval
+  let time: String
   
+  init(title: String, timeModel: TimeModel) {
+    self.title = title
+    self.time = String((timeModel.warmUp + timeModel.coolDown + (timeModel.highInterval * timeModel.set) + (timeModel.lowInterval * timeModel.set)))
+  }
+
 }

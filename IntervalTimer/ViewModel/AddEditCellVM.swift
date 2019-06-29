@@ -11,9 +11,7 @@ import RxCocoa
 
 class AddEditCellVM {
 
-  let name: String
+  let name = PublishSubject<String>()
+  let time = PublishSubject<String>()
   
-  init(routineModel: RoutineModel) {
-    self.name = routineModel.title
-  }
 }

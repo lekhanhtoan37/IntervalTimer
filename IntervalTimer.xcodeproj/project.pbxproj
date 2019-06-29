@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA11EE3422C5AF77007B1234 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EE3322C5AF77007B1234 /* Themes.swift */; };
+		DA11EE3622C61663007B1234 /* CreateRoutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EE3522C61663007B1234 /* CreateRoutineViewModel.swift */; };
+		DA11EE3822C757BB007B1234 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EE3722C757BB007B1234 /* TimeViewModel.swift */; };
+		DA1AC86222BB2D56003AD40C /* BehaviorRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1AC86122BB2D56003AD40C /* BehaviorRelay.swift */; };
+		DA4785B722BA255400BCAF0D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4785B622BA255400BCAF0D /* MainViewModel.swift */; };
+		DA47C28822B9E92400734D66 /* RoutineDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA47C28722B9E92400734D66 /* RoutineDetailModel.swift */; };
 		DA58CEB422B727BA007EAAE6 /* NameAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58CEB322B727BA007EAAE6 /* NameAddCell.swift */; };
 		DA58CEBA22B72E4C007EAAE6 /* IntervalColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58CEB922B72E4C007EAAE6 /* IntervalColor.swift */; };
 		DA58CEBC22B7332B007EAAE6 /* TypeAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA58CEBB22B7332B007EAAE6 /* TypeAddCell.swift */; };
@@ -46,6 +52,13 @@
 		DA96BE1B22B496770077F3A7 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96BE1A22B496770077F3A7 /* TimeModel.swift */; };
 		DA96BE1F22B49CB60077F3A7 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA96BE1D22B49CB60077F3A7 /* AddEditViewController.swift */; };
 		DA96BE2022B49CB60077F3A7 /* AddEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA96BE1E22B49CB60077F3A7 /* AddEditViewController.xib */; };
+		DAA5313F22C1C892009E63ED /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5313D22C1C892009E63ED /* ProgressViewController.swift */; };
+		DAA5314022C1C892009E63ED /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAA5313E22C1C892009E63ED /* ProgressViewController.xib */; };
+		DAA5314522C1CAA0009E63ED /* ProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA5314422C1CAA0009E63ED /* ProgressViewModel.swift */; };
+		DAA6D29322BC7D6200946F6C /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA6D29222BC7D6200946F6C /* ViewModelType.swift */; };
+		DADED91A22C49C19001FBA27 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADED91922C49C19001FBA27 /* String.swift */; };
+		DADED91C22C4BAF6001FBA27 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADED91B22C4BAF6001FBA27 /* Image.swift */; };
+		DAE5BDAC22C30D66005447A3 /* RoutineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE5BDAB22C30D66005447A3 /* RoutineUseCase.swift */; };
 		EE2B53B79E9430B3E17769F7 /* Pods_IntervalTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A58F8CC528E26D4D7A6A3F3 /* Pods_IntervalTimer.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +66,12 @@
 		1A58F8CC528E26D4D7A6A3F3 /* Pods_IntervalTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntervalTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF567B1E86FB51F6100D391 /* Pods-IntervalTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntervalTimer.debug.xcconfig"; path = "Target Support Files/Pods-IntervalTimer/Pods-IntervalTimer.debug.xcconfig"; sourceTree = "<group>"; };
 		7F9024FFF7A64F9EEE43F20D /* Pods-IntervalTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntervalTimer.release.xcconfig"; path = "Target Support Files/Pods-IntervalTimer/Pods-IntervalTimer.release.xcconfig"; sourceTree = "<group>"; };
+		DA11EE3322C5AF77007B1234 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
+		DA11EE3522C61663007B1234 /* CreateRoutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineViewModel.swift; sourceTree = "<group>"; };
+		DA11EE3722C757BB007B1234 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
+		DA1AC86122BB2D56003AD40C /* BehaviorRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BehaviorRelay.swift; sourceTree = "<group>"; };
+		DA4785B622BA255400BCAF0D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DA47C28722B9E92400734D66 /* RoutineDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDetailModel.swift; sourceTree = "<group>"; };
 		DA58CEB322B727BA007EAAE6 /* NameAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAddCell.swift; sourceTree = "<group>"; };
 		DA58CEB922B72E4C007EAAE6 /* IntervalColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalColor.swift; sourceTree = "<group>"; };
 		DA58CEBB22B7332B007EAAE6 /* TypeAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAddCell.swift; sourceTree = "<group>"; };
@@ -94,6 +113,13 @@
 		DA96BE1A22B496770077F3A7 /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 		DA96BE1D22B49CB60077F3A7 /* AddEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 		DA96BE1E22B49CB60077F3A7 /* AddEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEditViewController.xib; sourceTree = "<group>"; };
+		DAA5313D22C1C892009E63ED /* ProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		DAA5313E22C1C892009E63ED /* ProgressViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
+		DAA5314422C1CAA0009E63ED /* ProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewModel.swift; sourceTree = "<group>"; };
+		DAA6D29222BC7D6200946F6C /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		DADED91922C49C19001FBA27 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		DADED91B22C4BAF6001FBA27 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		DAE5BDAB22C30D66005447A3 /* RoutineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +200,7 @@
 		DA82521422B379BB00BFA6F5 /* IntervalTimer */ = {
 			isa = PBXGroup;
 			children = (
+				DAA6D29022BC7D4600946F6C /* Protocols */,
 				DA58CEB822B72E3A007EAAE6 /* Public */,
 				DA82522922B379EC00BFA6F5 /* Model */,
 				DA82522A22B379EE00BFA6F5 /* ViewModel */,
@@ -188,8 +215,9 @@
 		DA82522722B379DA00BFA6F5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DA96BE1C22B49C3C0077F3A7 /* AddEditVC */,
 				DA96BDFA22B3863D0077F3A7 /* MainVC */,
+				DA96BE1C22B49C3C0077F3A7 /* AddEditVC */,
+				DAA5313C22C1C7C7009E63ED /* ProgressVC */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -200,6 +228,9 @@
 				DA96BE0722B38FCB0077F3A7 /* RoundView.swift */,
 				DA96BE1622B494B20077F3A7 /* Date+Time.swift */,
 				DA96BE1822B495140077F3A7 /* Int.swift */,
+				DA1AC86122BB2D56003AD40C /* BehaviorRelay.swift */,
+				DADED91922C49C19001FBA27 /* String.swift */,
+				DADED91B22C4BAF6001FBA27 /* Image.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -209,6 +240,8 @@
 			children = (
 				DA96BE1222B3EB390077F3A7 /* RoutineModel.swift */,
 				DA96BE1A22B496770077F3A7 /* TimeModel.swift */,
+				DA47C28722B9E92400734D66 /* RoutineDetailModel.swift */,
+				DA11EE3322C5AF77007B1234 /* Themes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				DA96BE1422B3EC2D0077F3A7 /* RoutineViewModel.swift */,
+				DA11EE3722C757BB007B1234 /* TimeViewModel.swift */,
+				DA4785B622BA255400BCAF0D /* MainViewModel.swift */,
 				DA58CED322B88809007EAAE6 /* AddEditViewModel.swift */,
 				DA58CED522B88853007EAAE6 /* AddEditCellVM.swift */,
 			);
@@ -280,10 +315,46 @@
 			isa = PBXGroup;
 			children = (
 				DA96BE1D22B49CB60077F3A7 /* AddEditViewController.swift */,
+				DA11EE3522C61663007B1234 /* CreateRoutineViewModel.swift */,
 				DA96BE1E22B49CB60077F3A7 /* AddEditViewController.xib */,
 				DA58CEB222B7278F007EAAE6 /* AddEditCell */,
 			);
 			path = AddEditVC;
+			sourceTree = "<group>";
+		};
+		DAA5313C22C1C7C7009E63ED /* ProgressVC */ = {
+			isa = PBXGroup;
+			children = (
+				DAA5314222C1CA71009E63ED /* ProgressVC */,
+				DAA5314122C1CA69009E63ED /* New Group */,
+				DAA5314422C1CAA0009E63ED /* ProgressViewModel.swift */,
+			);
+			path = ProgressVC;
+			sourceTree = "<group>";
+		};
+		DAA5314122C1CA69009E63ED /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		DAA5314222C1CA71009E63ED /* ProgressVC */ = {
+			isa = PBXGroup;
+			children = (
+				DAA5313D22C1C892009E63ED /* ProgressViewController.swift */,
+				DAA5313E22C1C892009E63ED /* ProgressViewController.xib */,
+			);
+			name = ProgressVC;
+			sourceTree = "<group>";
+		};
+		DAA6D29022BC7D4600946F6C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DAA6D29222BC7D6200946F6C /* ViewModelType.swift */,
+				DAE5BDAB22C30D66005447A3 /* RoutineUseCase.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +425,7 @@
 				DA58CEC422B73E9C007EAAE6 /* WarmUpBaseCell.xib in Resources */,
 				DA82521D22B379BD00BFA6F5 /* Assets.xcassets in Resources */,
 				DA82521B22B379BB00BFA6F5 /* Main.storyboard in Resources */,
+				DAA5314022C1C892009E63ED /* ProgressViewController.xib in Resources */,
 				DA82523022B37A9D00BFA6F5 /* MainViewController.xib in Resources */,
 				DA96BDFF22B386940077F3A7 /* ListCell.xib in Resources */,
 				DA96BE0222B38CE90077F3A7 /* Celendar.xib in Resources */,
@@ -418,24 +490,36 @@
 				DA58CECB22B74A8D007EAAE6 /* LowHighCell.swift in Sources */,
 				DA96BE0822B38FCB0077F3A7 /* RoundView.swift in Sources */,
 				DA96BE1522B3EC2D0077F3A7 /* RoutineViewModel.swift in Sources */,
+				DAA6D29322BC7D6200946F6C /* ViewModelType.swift in Sources */,
+				DAA5314522C1CAA0009E63ED /* ProgressViewModel.swift in Sources */,
 				DA96BE0A22B3A24B0077F3A7 /* HeaderRoutineTableView.swift in Sources */,
 				DA96BDFD22B386830077F3A7 /* ListCell.swift in Sources */,
+				DA11EE3822C757BB007B1234 /* TimeViewModel.swift in Sources */,
 				DA58CEBE22B7338D007EAAE6 /* WarmUpBaseCell.swift in Sources */,
+				DADED91C22C4BAF6001FBA27 /* Image.swift in Sources */,
+				DA47C28822B9E92400734D66 /* RoutineDetailModel.swift in Sources */,
+				DADED91A22C49C19001FBA27 /* String.swift in Sources */,
 				DA96BE0622B38EA30077F3A7 /* CelendarViewController.swift in Sources */,
 				DA96BE1322B3EB390077F3A7 /* RoutineModel.swift in Sources */,
 				DA82521822B379BB00BFA6F5 /* ViewController.swift in Sources */,
 				DA58CED422B88809007EAAE6 /* AddEditViewModel.swift in Sources */,
+				DAA5313F22C1C892009E63ED /* ProgressViewController.swift in Sources */,
 				DA82521622B379BB00BFA6F5 /* AppDelegate.swift in Sources */,
 				DA96BE1B22B496770077F3A7 /* TimeModel.swift in Sources */,
+				DA4785B722BA255400BCAF0D /* MainViewModel.swift in Sources */,
 				DA58CEBA22B72E4C007EAAE6 /* IntervalColor.swift in Sources */,
 				DA58CEB422B727BA007EAAE6 /* NameAddCell.swift in Sources */,
 				DA58CED622B88853007EAAE6 /* AddEditCellVM.swift in Sources */,
 				DA58CECF22B74BEA007EAAE6 /* RepeatCell.swift in Sources */,
 				DA96BE1F22B49CB60077F3A7 /* AddEditViewController.swift in Sources */,
 				DA96BE1122B3B5570077F3A7 /* CircularView.swift in Sources */,
+				DA11EE3422C5AF77007B1234 /* Themes.swift in Sources */,
+				DA11EE3622C61663007B1234 /* CreateRoutineViewModel.swift in Sources */,
+				DA1AC86222BB2D56003AD40C /* BehaviorRelay.swift in Sources */,
 				DA96BE1722B494B20077F3A7 /* Date+Time.swift in Sources */,
 				DA58CED222B74CCB007EAAE6 /* BaseTableViewCell.swift in Sources */,
 				DA96BE0422B38E0E0077F3A7 /* CelendarCell.swift in Sources */,
+				DAE5BDAC22C30D66005447A3 /* RoutineUseCase.swift in Sources */,
 				DA58CEC722B7478D007EAAE6 /* IntervalCycleCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

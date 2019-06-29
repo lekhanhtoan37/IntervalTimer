@@ -11,16 +11,14 @@ import RxSwift
 import RxCocoa
 
 class RoutineViewModel {
-  let title = BehaviorSubject<String>(value: "")
-  
-  let time = PublishSubject<TimeViewModel>()
-  
-}
-
-struct TimeViewModel {
-  var totalTime: String
-  
-  init(hour: Int, minute: Int, second: Int) {
-    self.totalTime = String(hour) + ":" + String(minute) + ":" + String(second)
+  let items = BehaviorRelay<[RoutineModel]>(value: [])
+  let title = BehaviorRelay<String>(value: "")
+  let routineModel: RoutineModel
+  let timeViewModel: TimeViewModel
+  init(routineModel: RoutineModel, timeViewModel: TimeViewModel) {
+    self.routineModel = routineModel
+    self.timeViewModel = timeViewModel
+    self.items.acceptAppending(RoutineModel(title: routineModel.title, timeModel: TimeModel(warmUp: timeViewModel.warmUp.value, lowInterval: timeViewModel.lowInterval.value, highInterval: timeViewModel.highInterval.value, coolDown: timeViewModel.coolDown.value, set: timeViewModel.set.value)))
   }
 }
+
